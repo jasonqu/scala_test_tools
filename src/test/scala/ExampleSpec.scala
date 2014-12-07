@@ -11,7 +11,7 @@ class ExampleSpec extends FlatSpec with Matchers {
     stack.pop() should be (1)
   }
 
-  it should "throw NoSuchElementException if an empty stack is popped" in {
+  ignore should "throw NoSuchElementException if an empty stack is popped" in {
     val emptyStack = new Stack[Int]
     a [NoSuchElementException] should be thrownBy {
       emptyStack.pop()
@@ -78,7 +78,7 @@ class SetWordSpec extends WordSpec {
   "A Set" when {
     "empty" should {
       "have size 0" in {
-        assert(Set.empty.size == 0)
+        assert(Set.empty.size === 1)
       }
 
       "produce NoSuchElementException when head is invoked" in {
